@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mazda Page 8&9</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://kit.fontawesome.com/aed056c6bf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+  <!-- --------------start of header---------------------- -->
+  <div class="container-fluid text-center header">
+    <div class="row">
+      <div class="col-3 col-lg-2">
+        <!-- <a href="index.html"> -->
+        <a href="../page1&2/index.html">
+          <img src="/Bootstrap-Mazda-Latest/html/images/logo.png" class="mt-3 ms-2 float-start" alt="logo" />
+        </a>
+      </div>
+      <div class="col-7 col-lg-6 text-start mt-4 mt-md-2 header-title">
+        SUPPLY DEMAND SIMULATOR </div>
+      <div class="col-lg-1 d-none d-lg-block header-icons mt-3 border-rightt">
+        <i class="fa-solid fa-link" style="font-size: 28px"></i>
+        <p class="landscape-p">Useful Links</p>
+      </div>
+      <div class="col-lg-1 d-none d-lg-block header-icons mt-3 border-rightt">
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 28px"></i>
+        <p style="font-size: 13px">Search</p>
+      </div>
+      <div class="col-2 col-lg-2 d-lg-flex mt-4 d-flex flex-row-reverse header-icons">
+        <i class="fa-regular fa-user"></i>
+        <p>User Name</p>
+      </div>
+    </div>
+  </div>
+  <!-- ----------------------end of header---------------------- -->
+
+  <!-- -------------------start of sidebar------------------------- -->
+  <div class="container-fluid main-container">
+    <div class="row" style="margin: 0px">
+      <div class="col-3 col-md-1 col-lg-1 hamburger-container" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        <i class="fa-solid fa-bars hamburger"></i>
+      </div>
+      <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="static" tabindex="-1"
+        id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="padding: 0px">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close hamburger-close" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body container" style="padding-bottom: 0; height: 100%">
+          <div class="sidebar-container row" style="height: 100%">
+            <div class="col-2 border-end pt-4 sidebar-border" style="height: 100%">
+              <div class="d-flex justify-content-start align-items-center flex-column" style="gap: 30px">
+                <i class="fa-solid fa-bell" style="color: #8c8c8c"></i>
+                <i class="fa-solid fa-bell-slash" style="color: #8c8c8c"></i>
+                <i class="fa-solid fa-face-meh-blank" style="color: #c8c8c8"></i>
+              </div>
+            </div>
+            <div class="col-10 navitems">
+              <h5 class="text-left mt-4 ms-3" style="font-size: 13px; color: #c8c8c8">
+                APPLICATIONS
+              </h5>
+              <div>
+                <pre class="ms-3 mt-5" style="color: #8c8c8c">
+CONTACT REPORTS         +</pre>
+                <pre class="ms-3" style="color: #8c8c8c">
+SERVICE SHOP CAPACITY   +</pre>
+                <pre class="ms-3" style="color: #ffffff">
+SUUPLY DEMAND SIMULATOR -</pre>
+                <pre class="ms-3" style="color: #8c8c8c"><i class="fa-solid fa-arrow-right"></i> By Region</pre>
+                <pre class="ms-3" style="color: #8c8c8c"><i class="fa-solid fa-arrow-right"></i> By Dealer</pre>
+                <pre class="ms-3" style="color: #8c8c8c"><i class="fa-solid fa-arrow-right"></i> By Market</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-9 col-md-11 col-lg-10 d-flex justify-content-center align-items-center flex-row">
+        <!-- <div class="d-none d-sm-flex d-md-flex d-lg-flex justify-content-start align-items-center flex-row funnel"> -->
+          <div class="d-flex justify-content-end justify-content-lg-start align-items-center flex-row funnel">
+
+          <i class="fa-solid fa-filter d-flex justify-content-start align-items-center flex-column" id="toggleButton"
+            style="font-size: 25px; margin-right: 5px"></i>
+          <i class="fa-solid fa-angle-up arrow-icon" style="font-size: 20px"></i>
+        </div>
+        <div class="d-none d-lg-block" style="width: 141px">
+          <span style="font-size: 11px; text-align: center; color: #2b2b2b">LOCATION</span>
+          <div class="d-flex justify-content-start align-items-center flex-row">
+            <div class="mv">MV</div>
+            <div class="do4">DO4</div>
+          </div>
+        </div>
+        <div class="d-lg-block pt-4 long-p">
+          <pre style="color: #101010; font-weight: bold">
+34448-STUART POWEL MAZDA | FCITY TYPE-AB</pre>
+        </div>
+        <div class="d-none d-sm-block d-md-block d-lg-block time-nov">
+          <span style="font-size: 11px; text-align: center; color: #2b2b2b">TIMING</span>
+          <div class="timing">NOVEMBER, 2021</div>
+        </div>
+      </div>
+      <div class="col-lg-1">
+        <div class="d-none d-lg-flex justify-content-end align-items-center">
+          <i class="fas fa-file-excel excel-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------end of sidebar-------------------------- -->
+
+  <!-- --------------------------start of main-content------------------------------- -->
+  <div class="page1">
+    <div class="breadcrumb-header pt-4 mx-4">
+      SUPPLY DEMAND SIMULATOR,DEALER VIEW
+    </div>
+    <div class="bc">
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-1 mx-4">
+          <li class="breadcrumb-item"><a href="#" style="font-weight: bold;">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Applications</a></li>
+          <li class="breadcrumb-item"><a href="#">SDM</a></li>
+          <li class="breadcrumb-item active" aria-current="page" style="color: #999999">
+            DEALER VIEW
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!-- ---------------start of accordion---------------------- -->
+    <div class="mx-4 mt-4">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <!-- /////////////////////accordion-table//////////////// -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              TOTAL RO(CP, I, W) WEEKLY TREND </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <!-- -----------------------start of child accordion---------------------- -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed chbut" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    2019 VS 2021, FOR STUART POWELL MAZDA(34448) </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <canvas id="myChart" style="width:100%;max-width:100%"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed chbut" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    AVERAGE LEAD TIME, 34448 VS MW </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <canvas id="myChart1" style="width:100%;max-width:100%"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- ----------------------end of child accordion---------------------- -->
+              <div class="mt-4" style="font-size: 18px;color: #000000;font-weight: bold;">NOVEMBER PERFORMANCE</div>
+              <div class="row mx-2 mt-4" style="gap: 20px;">
+                <div class="col-lg" style="box-shadow: 0px 3px 6px #272D3B33;">
+                  <div class="mt-3 ms-2 d-flex justify-content-between align-items-center">
+                    <div style="color: #272D3B;font-size: 20px;font-weight: bold;">Current RO vs Estimated RO</div>
+                    <div style="color: #D4D4D4;font-size: 20px;"><i class="fa-solid fa-circle-info"></i></div>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-center  align-items-center flex-row">
+                    <div class="col-lg d-flex justify-content-center align-items-center flex-row" style="gap: 30px">
+                      <div class="progress-circle">
+                        <span class="progress-text">79%</span>
+                        <svg class="progress-svg" width="100" height="100">
+                          <circle class="progress-bar one" cx="50%" cy="50%" r="45"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <span style="
+                              color: #999999;
+                              font-size: 15px;
+                              font-weight: bold;
+                            ">UnderPerforming Estimated Ro</span>
+                        <i class="fa-solid fa-arrow-down" style="color: red;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg" style="box-shadow: 0px 3px 6px #272D3B33;">
+                  <div class="mt-3 ms-2 d-flex justify-content-between align-items-center">
+                    <div style="color: #272D3B;font-size: 20px;font-weight: bold;">Average LT vs National</div>
+                    <div style="color: #D4D4D4;font-size: 20px;"><i class="fa-solid fa-circle-info"></i></div>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-center  align-items-center flex-row">
+                    <div class="col-lg d-flex justify-content-center align-items-center flex-column">
+                      <div style="
+                      color: #272D3B;
+                      font-size: 45px;
+                      font-weight: bold;
+                    ">2.4
+                      </div>
+                      <div style="
+                      color: #999999;
+                      font-size: 15px;
+                      font-weight: bold;
+                    "> <i class="fa-solid fa-arrow-down" style="color: red;"></i>
+                        Less than target (3 days)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg" style="box-shadow: 0px 3px 6px #272D3B33;">
+                  <div class="mt-3 ms-2 d-flex justify-content-between align-items-center">
+                    <div style="color: #272D3B;font-size: 20px;font-weight: bold;">RO Per Advisor</div>
+                    <div style="color: #D4D4D4;font-size: 20px;"><i class="fa-solid fa-circle-info"></i></div>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-center  align-items-center flex-row">
+                    <div class="col-lg d-flex justify-content-center align-items-center flex-column"
+                      style="margin-bottom: 25px;">
+                      <div style="
+                      color: #272D3B;
+                      font-size: 45px;
+                      font-weight: bold;
+                    ">0
+                      </div>
+                      <div style="
+                      color: #999999;
+                      font-size: 15px;
+                      font-weight: bold;
+                    ">Daily RO Per Advisor
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              MONTH WISE SERVICE DETAILS </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table table-bordered" id="no-more-tables" style="margin: auto; width: 100%">
+                <thead>
+                  <tr class="row-1">
+                    <th style="text-align: left; width: 126px">2021</th>
+                    <th>JAN</th>
+                    <th>FEB</th>
+                    <th>MAR</th>
+                    <th>APR</th>
+                    <th>MAY</th>
+                    <th>JUN</th>
+                    <th>JULY</th>
+                    <th>AUGU</th>
+                    <th>SEPT</th>
+                    <th>OCT</th>
+                    <th>NOV</th>
+                    <th>DEC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" style="text-align: left; font-size: 20px; padding: 10px 0px">
+                      RO/month
+                    </th>
+                    <td data-title="JAN">3681</td>
+                    <td data-title="FEB">3671</td>
+                    <td data-title="MAR">3271</td>
+                    <td data-title="APR">3371</td>
+                    <td data-title="MAY">3271</td>
+                    <td data-title="JUN">-</td>
+                    <td data-title="JULY">-</td>
+                    <td data-title="AUGU">-</td>
+                    <td data-title="SEPT">-</td>
+                    <td data-title="OCT">-</td>
+                    <td data-title="NOV">-</td>
+                    <td data-title="DEC">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="e3dddd" style="text-align: left; font-size: 20px; padding: 10px 0px">
+                      Weekly RO Average
+                    </th>
+                    <td data-title="JAN" style="background-color: #e3dddd">3611</td>
+                    <td data-title="FEB" style="background-color: #e3dddd">3271</td>
+                    <td data-title="MAR" style="background-color: #e3dddd">3371</td>
+                    <td data-title="APR" style="background-color: #e3dddd">3771</td>
+                    <td data-title="MAY" style="background-color: #e3dddd">3871</td>
+                    <td data-title="JUN" style="background-color: #e3dddd">3971</td>
+                    <td data-title="JULY" style="background-color: #e3dddd">3611</td>
+                    <td data-title="AUGU" style="background-color: #e3dddd">3621</td>
+                    <td data-title="SEPT" style="background-color: #e3dddd">3671</td>
+                    <td data-title="OCT" style="background-color: #e3dddd">3651</td>
+                    <td data-title="NOV" style="background-color: #e3dddd">3671</td>
+                    <td data-title="DEC" style="background-color: #e3dddd">3671</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="text-align: left; font-size: 20px; padding: 10px 0px">
+                      Techs
+                    </th>
+                    <td data-title="JAN">3681</td>
+                    <td data-title="FEB">3671</td>
+                    <td data-title="MAR">3271</td>
+                    <td data-title="APR">3371</td>
+                    <td data-title="MAY">3271</td>
+                    <td data-title="JUN">3171</td>
+                    <td data-title="JULY">3571</td>
+                    <td data-title="AUGU">3671</td>
+                    <td data-title="SEPT">3771</td>
+                    <td data-title="OCT">3271</td>
+                    <td data-title="NOV">3621</td>
+                    <td data-title="DEC">3611</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="e3dddd" style="text-align: left; font-size: 20px; padding: 10px 0px">
+                      Advisor
+                    </th>
+                    <td data-title="JAN" style="background-color: #e3dddd">3611</td>
+                    <td data-title="FEB" style="background-color: #e3dddd">3271</td>
+                    <td data-title="MAR" style="background-color: #e3dddd">3371</td>
+                    <td data-title="APR" style="background-color: #e3dddd">3771</td>
+                    <td data-title="MAY" style="background-color: #e3dddd">3871</td>
+                    <td data-title="JUN" style="background-color: #e3dddd">3971</td>
+                    <td data-title="JULY" style="background-color: #e3dddd">3611</td>
+                    <td data-title="AUGU" style="background-color: #e3dddd">3621</td>
+                    <td data-title="SEPT" style="background-color: #e3dddd">3671</td>
+                    <td data-title="OCT" style="background-color: #e3dddd">3651</td>
+                    <td data-title="NOV" style="background-color: #e3dddd">3671</td>
+                    <td data-title="DEC" style="background-color: #e3dddd">3671</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="e999999">Daily RO/ Advisor</th>
+                    <td data-title="JAN" style="background-color: #999999">3611</td>
+                    <td data-title="FEB" style="background-color: #999999">3271</td>
+                    <td data-title="MAR" style="background-color: #999999">3371</td>
+                    <td data-title="APR" style="background-color: #999999">3771</td>
+                    <td data-title="MAY" style="background-color: #999999">3871</td>
+                    <td data-title="JUN" style="background-color: #999999">3971</td>
+                    <td data-title="JULY" style="background-color: #999999">3611</td>
+                    <td data-title="AUGU" style="background-color: #999999">3621</td>
+                    <td data-title="SEPT" style="background-color: #999999">3671</td>
+                    <td data-title="OCT" style="background-color: #999999">3651</td>
+                    <td data-title="NOV" style="background-color: #999999">3671</td>
+                    <td data-title="DEC" style="background-color: #999999">3671</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="e3dddd" style="text-align: left; font-size: 20px; padding: 10px 0px">
+                      AVG. LEAD TIME
+                    </th>
+                    <td data-title="JAN" style="background-color: #e3dddd">3611</td>
+                    <td data-title="FEB" style="background-color: #e3dddd">3271</td>
+                    <td data-title="MAR" style="background-color: #e3dddd">3371</td>
+                    <td data-title="APR" style="background-color: #e3dddd">3771</td>
+                    <td data-title="MAY" style="background-color: #e3dddd">3871</td>
+                    <td data-title="JUN" style="background-color: #e3dddd">3971</td>
+                    <td data-title="JULY" style="background-color: #e3dddd">3611</td>
+                    <td data-title="AUGU" style="background-color: #e3dddd">3621</td>
+                    <td data-title="SEPT" style="background-color: #e3dddd">3671</td>
+                    <td data-title="OCT" style="background-color: #e3dddd">3651</td>
+                    <td data-title="NOV" style="background-color: #e3dddd">3671</td>
+                    <td data-title="DEC" style="background-color: #e3dddd">3671</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- <div class="table-responsive">
+                <table id="no-more-tables" class="table table-bordered"
+                  style="justify-content: center; box-shadow: 0px 2px 4px #00000029">
+
+                  <thead>
+                    <tr class="row-1">
+                      <th style="text-align: left;width: 126px;">DEALER INFORMATION</th>
+                      <th>JAN</th>
+                      <th>FEB</th>
+                      <th>MAR</th>
+                      <th>APR</th>
+                      <th>MAY</th>
+                      <th>JUN</th>
+                      <th>JULY</th>
+                      <th>AUGU</th>
+                      <th>SEPT</th>
+                      <th>OCT</th>
+                      <th>NOV</th>
+                      <th>DEC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="text-align: left">RO/month</th>
+                      <td>3681</td>
+                      <td>3671</td>
+                      <td>3271</td>
+                      <td>3371</td>
+                      <td>3271</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: left; background-color: #e3dddd">
+                        Weekly RO Average
+                      </th>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3271</td>
+                      <td style="background-color: #e3dddd">3371</td>
+                      <td style="background-color: #e3dddd">3771</td>
+                      <td style="background-color: #e3dddd">3871</td>
+                      <td style="background-color: #e3dddd">3971</td>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3621</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3651</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: left">Techs</th>
+                      <td>3681</td>
+                      <td>3671</td>
+                      <td>3271</td>
+                      <td>3371</td>
+                      <td>3271</td>
+                      <td>3171</td>
+                      <td>3571</td>
+                      <td>3671</td>
+                      <td>3771</td>
+                      <td>3271</td>
+                      <td>3621</td>
+                      <td>3611</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: left; background-color: #e3dddd">
+                        Advisor
+                      </th>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3271</td>
+                      <td style="background-color: #e3dddd">3371</td>
+                      <td style="background-color: #e3dddd">3771</td>
+                      <td style="background-color: #e3dddd">3871</td>
+                      <td style="background-color: #e3dddd">3971</td>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3621</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3651</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: left;background-color: #999999;">Daily RO/ Advisor</th>
+                      <td style="background-color: #999999">3681</td>
+                      <td style="background-color: #999999">3671</td>
+                      <td style="background-color: #999999">3271</td>
+                      <td style="background-color: #999999">3371</td>
+                      <td style="background-color: #999999">3271</td>
+                      <td style="background-color: #999999">3171</td>
+                      <td style="background-color: #999999">3571</td>
+                      <td style="background-color: #999999">3671</td>
+                      <td style="background-color: #999999">3771</td>
+                      <td style="background-color: #999999">3271</td>
+                      <td style="background-color: #999999">3621</td>
+                      <td style="background-color: #999999">3611</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: left; background-color: #e3dddd">
+                        Avg. Lead Time
+                      </th>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3271</td>
+                      <td style="background-color: #e3dddd">3371</td>
+                      <td style="background-color: #e3dddd">3771</td>
+                      <td style="background-color: #e3dddd">3871</td>
+                      <td style="background-color: #e3dddd">3971</td>
+                      <td style="background-color: #e3dddd">3611</td>
+                      <td style="background-color: #e3dddd">3621</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3651</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                      <td style="background-color: #e3dddd">3671</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> -->
+              <div class="d-flex flex-column justify-content-start align-items-start gap-2 mt-5">
+                <div class="my-2">
+                  <h2 style="font: normal normal normal 16px/19px Mazda Type;
+                    letter-spacing: 1.9px;
+                    color: #000000;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    opacity: 1;">DEFINATION</h2>
+                </div>
+                <div class="d-flex flex-lg-row flex-md-row flex-column align-items-center gap-4 my-2">
+                  <div><span style="font-weight: bold;">RO</span><span>= CIW count
+                      (OBIEE)</span></div>
+                  <div><span style="font-weight: bold;">Techs (D350)</span> <span>= number of
+                      technicians at the
+                      beginning of the
+                      month</span></div>
+                  <span><span style="font-weight: bold;">Advisors</span><span>= D311 Service
+                      Consultant & D303 Asst Service Manager</span></span>
+                </div>
+                <div
+                  class="d-flex  flex-lg-row flex-md-row flex-column justify-content-center align-items-center gap-4 my-2">
+                  <div><span style="font-weight: bold;">RO Potential</span><span>= available
+                      clock hours x benchmark
+                      proficiency / flat
+                      rate hours per RO</span></div>
+                  <div>
+                    <span style="font-weight: bold;">Proficiency</span>= hours available /
+                    flat rate hours
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              LABOR SALES DATA </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" style="justify-content: center">
+                  <thead>
+                    <tr class="row-1">
+                      <th style="text-align: center"></th>
+                      <th>SALES PER RO (CP+I+W)</th>
+                      <th>SALES/MONTH (CURRENT RO#)</th>
+                      <th>SALES/MONTH (ESTIMATED RO#)</th>
+                      <th>MAX INCREMENTAL VS CURRENT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="
+                          background-color: #2b2b2b;
+                          color: #ffffff;
+                          text-align: center;
+                        " class="tlh">
+                        CURRENT $ PER RO
+                      </th>
+                      <td>$187</td>
+                      <td>$0</td>
+                      <td>$27,869</td>
+                      <td style="color: green;">+$27,869<i class="fa-solid fa-arrow-up" style="padding-left: 10px;"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="
+                          background-color: #2b2b2b;
+                          color: #ffffff;
+                          text-align: center;
+                        " class="tlh">
+                        VS. MNAO TOP 15%
+                      </th>
+                      <td style="background-color: #e3dddd">$187</td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              LABOR GROSS DATA </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" style="justify-content: center">
+                  <thead>
+                    <tr class="row-1">
+                      <th style="text-align: center"></th>
+                      <th>SALES PER RO (CP+I+W)</th>
+                      <th>SALES/MONTH (CURRENT RO#)</th>
+                      <th>SALES/MONTH (ESTIMATED RO#)</th>
+                      <th>MAX INCREMENTAL VS CURRENT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        CURRENT $ PER RO
+                      </th>
+                      <td>$187</td>
+                      <td>$0</td>
+                      <td>$27,869</td>
+                      <td style="color: green;">+$27,869<i class="fa-solid fa-arrow-up" style="padding-left: 10px;"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        VS. MNAO TOP 15%
+                      </th>
+                      <td style="background-color: #e3dddd">$187</td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+              PARTS SALES DATA </button>
+          </h2>
+          <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" style="justify-content: center">
+                  <thead>
+                    <tr class="row-1">
+                      <th style="text-align: center"></th>
+                      <th>SALES PER RO (CP+I+W)</th>
+                      <th>SALES/MONTH (CURRENT RO#)</th>
+                      <th>SALES/MONTH (ESTIMATED RO#)</th>
+                      <th>MAX INCREMENTAL VS CURRENT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        CURRENT $ PER RO
+                      </th>
+                      <td>$187</td>
+                      <td>$0</td>
+                      <td>$27,869</td>
+                      <td style="color: green;">+$27,869<i class="fa-solid fa-arrow-up" style="padding-left: 10px;"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        VS. MNAO TOP 15%
+                      </th>
+                      <td style="background-color: #e3dddd">$187</td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              PARTS GROSS DATA </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" style="justify-content: center">
+                  <thead>
+                    <tr class="row-1">
+                      <th style="text-align: center"></th>
+                      <th>SALES PER RO (CP+I+W)</th>
+                      <th>SALES/MONTH (CURRENT RO#)</th>
+                      <th>SALES/MONTH (ESTIMATED RO#)</th>
+                      <th>MAX INCREMENTAL VS CURRENT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        CURRENT $ PER RO
+                      </th>
+                      <td>$187</td>
+                      <td>$0</td>
+                      <td>$27,869</td>
+                      <td style="color: green;">+$27,869<i class="fa-solid fa-arrow-up" style="padding-left: 10px;"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="
+                            background-color: #2b2b2b;
+                            color: #ffffff;
+                            text-align: center;
+                          " class="tlh">
+                        VS. MNAO TOP 15%
+                      </th>
+                      <td style="background-color: #e3dddd">$187</td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                      <td style="background-color: #e3dddd"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------end of accordion--------------------------- -->
+    <!-- --------------------------end of main-content------------------------------- -->
+
+    <!-- -------------------------start of footer------------------------ -->
+    <div style="padding-top: 100px;">
+      <div class="container-fluid px-5 footer-container mt-5">
+        <div class="row d-flex justify-content-center align-items-center flex-row">
+          <div class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end align-items-center flex-row">
+            <div class="p-4 footer-p border-r">
+              <p class="text-center text-lg-end">
+                &copy; 2022 MAZDA NORTH AMERICAN OPERATIONS. ALL RIGHTS
+                RESERVED.
+              </p>
+            </div>
+          </div>
+          <div class="d-none d-lg-block col-lg-5 d-flex justify-content-start align-items-center flex-row">
+            <div class="p-4 footer-p">
+              <p class="text-start">
+                Need help? <span><u>Contact Support</u></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ------------------------end of footer-------------------------- -->
+  <!-- --------------------------start of page3 dropdown--------------------- -->
+
+  <div class="container-fluid text-center page2" style="background-color: #f5f5f5">
+    <div class="row mt-1" style="margin-top: -50px">
+      <div class="col-2"></div>
+      <div
+        class="col-12 col-lg-4 pt-5 d-flex justify-content-start align-items-center flex-column border-right-location">
+        <p class="location">
+          <i class="fa-solid fa-earth-americas"></i> Location
+        </p>
+        <form>
+          <label for="region"></label><br />
+          <select id="region" name="region" style="color: #999999">
+            <option value="REGIONS" style="color: #999999">REGIONS</option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Australia">Australia</option>
+          </select>
+          <br />
+          <label for="district"></label><br />
+          <select id="district" name="district" style="color: #999999">
+            <option value="DISTRICTS" style="color: #999999">
+              DISTRICTS
+            </option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Australia">Australia</option>
+          </select>
+          <br />
+          <label for="dealer"></label><br />
+          <select id="dealer" name="dealer" style="color: #999999">
+            <option value="DEALERS">DEALERS</option>
+            <option value="USA">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Australia">Australia</option>
+          </select>
+          <br />
+          <label for="fname"></label><br />
+          <input type="text" id="fname" name="d-code" placeholder="DEALER CODE" /><br />
+        </form>
+        <p class="clear">CLEAR</p>
+      </div>
+      <div class="d-none d-lg-block border-rr"></div>
+      <div class="col-12 col-lg-4 pt-5 d-flex justify-content-start align-items-center flex-column">
+        <p class="location">
+          <i class="fa-regular fa-calendar-days"></i> Timing
+        </p>
+        <p class="month">MONTH</p>
+        <form>
+          <label for="month"></label>
+          <input type="text" id="fname" name="month" placeholder="Choose a month" />
+          <span><i class="fa-solid fa-table table-icon"></i></span>
+          <br />
+        </form>
+        <p class="current-month">CURRENT MONTH</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-5"></div>
+        <div class="col-12 col-lg-1 d-flex justify-content-center align-items-center flex-row d-lg-block">
+          <button class="update-btn">UPDATE</button>
+        </div>
+        <div class="col-12 col-lg-1 d-flex justify-content-center align-items-center flex-column d-lg-block">
+          <button class="cancel-btn">CANCEL</button>
+        </div>
+        <div class="col-5"></div>
+      </div>
+    </div>
+    <!-- --------------------------end of page3 dropdown--------------------- -->
+</body>
+
+</html>

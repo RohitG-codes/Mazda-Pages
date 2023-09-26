@@ -1,0 +1,486 @@
+@font-face {
+  font-family: "Mazda Type";
+  src: url("../fonts/MazdaType-Medium.eot");
+  src: url("../fonts/MazdaType-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MazdaType-Medium.woff2") format("woff2"),
+    url("../fonts/MazdaType-Medium.woff") format("woff"),
+    url("../fonts/MazdaType-Medium.ttf") format("truetype"),
+    url("../fonts/MazdaType-Medium.svg#MazdaType-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mazda Type";
+  src: url("../fonts/MazdaType-Italic.eot");
+  src: url("../fonts/MazdaType-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MazdaType-Italic.woff2") format("woff2"),
+    url("../fonts/MazdaType-Italic.woff") format("woff"),
+    url("../fonts/MazdaType-Italic.ttf") format("truetype"),
+    url("../fonts/MazdaType-Italic.svg#MazdaType-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mazda Type";
+  src: url("../fonts/MazdaType-Bold.eot");
+  src: url("../fonts/MazdaType-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MazdaType-Bold.woff2") format("woff2"),
+    url("../fonts/MazdaType-Bold.woff") format("woff"),
+    url("../fonts/MazdaType-Bold.ttf") format("truetype"),
+    url("../fonts/MazdaType-Bold.svg#MazdaType-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mazda Type";
+  src: url("../fonts/MazdaType-Regular.eot");
+  src: url("../fonts/MazdaType-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MazdaType-Regular.woff2") format("woff2"),
+    url("../fonts/MazdaType-Regular.woff") format("woff"),
+    url("../fonts/MazdaType-Regular.ttf") format("truetype"),
+    url("../fonts/MazdaType-Regular.svg#MazdaType-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Mazda Type";
+  background-color: #f5f5f5;
+}
+/* ----------------start of header-------------------- */
+
+.header {
+  height: 90px;
+  background: #2b2b2b 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.header-title {
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 40px;
+}
+
+.header-icons {
+  color: #999999;
+  gap: 15px;
+}
+.header-icons i {
+  font-size: 28px;
+}
+.header-icons p {
+  font-size: 20px;
+}
+.border-right {
+  border-right: 1px solid #484848;
+  height: 50px;
+}
+.header-icons .landscape-p {
+  font-size: 13px;
+}
+/* ------------------end of header---------------- */
+/* --------------------start of sidebar--------------- */
+.hamburger {
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 25px;
+  font-size: 40px;
+  color: #00000033;
+}
+.hamburger-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: -1.04px 6px 9px #00000012;
+  opacity: 1;
+}
+.hamburger-close {
+  font-size: 30px;
+  color: #999999;
+  opacity: 1;
+}
+.hamburger-close:hover {
+  color: #999999;
+  opacity: 1;
+}
+.offcanvas {
+  border: none;
+}
+.offcanvas.offcanvas-start {
+  top: 90px;
+  border: none;
+}
+.offcanvas-body {
+  position: relative;
+  top: -2px;
+  background: #2b2b2b 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-top: 0px;
+}
+.offcanvas.offcanvas-start,
+.offcanvas.offcanvas-show {
+  width: 327px;
+}
+/* -------------------end of sidebar------------------- */
+
+/* -----------------------start of main content---------------- */
+.breadcrumb-header {
+  font: normal normal bold 22px/26px Mazda Type;
+  letter-spacing: 2.62px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.bc nav ol li a {
+  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 1.43px;
+  color: #101010;
+  opacity: 1;
+}
+.month {
+  color: #999999;
+}
+.table-icon {
+  color: #888;
+  position: relative;
+  right: 34px;
+  font-size: 16px;
+  top: -9px;
+}
+.input-header {
+  font: normal normal bold 13px/22px Mazda Type;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+}
+form .input-1 {
+  width: 166px;
+  height: 45px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  opacity: 1;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+form .input-2 {
+  width: 350px;
+  height: 45px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  opacity: 1;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+form .input-3 {
+  width: 112px;
+  height: 45px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  opacity: 1;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+.input-1::placeholder {
+  font: normal normal normal 16px/19px Mazda Type;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+}
+.input-btn {
+  background: #101010 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+  height: 45px;
+  width: 166px;
+  color: white;
+  position: relative;
+  top: 27px;
+  padding: 14px;
+  padding-left: 20px;
+}
+.input-btn p {
+  font: normal normal bold 13px/15px Mazda Type;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.up-ex {
+  width: 138px;
+  height: 45px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #101010;
+  border-radius: 3px;
+  opacity: 1;
+  margin-right: 20px;
+}
+.up-ex p {
+  font: normal normal bold 13px/15px Mazda Type;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+  size: 13px;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+.dn-ex {
+  width: 164px;
+  height: 45px;
+  background: #101010 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+}
+.dn-ex p {
+  font: normal normal bold 13px/15px Mazda Type;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  size: 15px;
+  padding-top: 13px;
+  padding-left: 23px;
+}
+
+.table-caption {
+  font-weight: bold;
+  letter-spacing: 2.3px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
+  width: 67px;
+  height: 60px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #101010;
+  text-transform: uppercase;
+  opacity: 1;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
+  border-width: 0;
+}
+
+.table thead tr.row-1 th {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+.edit-btn {
+  width: 166px;
+  height: 45px;
+  background: #101010 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+}
+.edit-btn p {
+  text-align: center;
+  font: normal normal bold 13px/15px Mazda Type;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 13px;
+  padding-top: 15px;
+}
+.box-1 {
+  position: relative;
+  right: 10px;
+}
+.box-2 {
+  position: relative;
+  right: 30px;
+}
+.box-3 {
+  position: relative;
+  right: 67px;
+}
+.box-4 {
+  position: relative;
+  right: 120px;
+}
+/* ------------------end of main-content------------------ */
+
+/* ----------------start of footer--------------------- */
+.footer-container {
+  background: #2b2b2b 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 85px;
+  position: fixed;
+  bottom: 0;
+}
+.footer-p {
+  text-align: left;
+  letter-spacing: 0.13px;
+  color: #888888;
+  opacity: 1;
+}
+.border-r {
+  border-right: 1px solid #484848;
+  line-height: 0px;
+}
+/* ------------------end of footer-------------------- */
+
+/* ---------------------start of responsive----------------- */
+
+@media screen and (max-width: 920px) {
+  .header-title {
+    font-size: 40px;
+  }
+  .footer-p {
+    font-size: 10px;
+  }
+  .border-r {
+    border: none;
+  }
+  .box {
+    width: 200px;
+  }
+  .header-icons p {
+    font-size: 14px;
+  }
+  .header-icons i {
+    font-size: 20px;
+  }
+  .box-1 {
+    position: relative;
+    right: 0px;
+  }
+  .box-2 {
+    position: relative;
+    right: 0px;
+  }
+  .box-3 {
+    position: relative;
+    right: 0px;
+  }
+  .box-4 {
+    position: relative;
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-title {
+    font-size: 16px;
+  }
+  .footer-p {
+    font-size: smaller;
+  }
+  .border-r {
+    border: none;
+  }
+  .header-icons {
+    gap: 10px;
+  }
+  .header-icons p {
+    font-size: 10px;
+  }
+  .header-icons i {
+    font-size: 17px;
+  }
+  form .input-2 {
+    width: 241px;
+  }
+  .box-1 {
+    position: relative;
+    right: 0px;
+  }
+  .box-2 {
+    position: relative;
+    right: 0px;
+  }
+  .box-3 {
+    position: relative;
+    right: 0px;
+  }
+  .box-4 {
+    position: relative;
+    right: 0px;
+  }
+}
+@media (min-width: 600px) and (max-width: 740px) {
+  .header-title {
+    font-size: 27px;
+  }
+  .footer-p {
+    font-size: smaller;
+  }
+  .border-r {
+    border: none;
+  }
+  .header-icons {
+    gap: 10px;
+  }
+  .box {
+    width: 170px;
+  }
+  .box p {
+    font-size: 10px;
+  }
+  .header-icons p {
+    font-size: 12px;
+  }
+  .header-icons i {
+    font-size: 16px;
+  }
+  .box-1 {
+    position: relative;
+    right: 0px;
+  }
+  .box-2 {
+    position: relative;
+    right: 0px;
+  }
+  .box-3 {
+    position: relative;
+    right: 0px;
+  }
+  .box-4 {
+    position: relative;
+    right: 0px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .box {
+    width: 289px;
+  }
+  .header-icons .landscape-p {
+    font-size: 11px;
+  }
+  form .input-1 {
+    width: 112px;
+  }
+  form .input-2 {
+    width: 271px;
+  }
+}
+/* ----------------------end of responsie------------------- */
